@@ -9,14 +9,10 @@ namespace WebAPI.services
 {
     public class RepositoryServices : IRepositoryServices
     {
-        private readonly HttpClient client = new HttpClient();
-        //public RepositoryServices(HttpClient client)
-        //{
-           //this.client = client;
-        //}
-        public async Task<List<Repository>> ProcessRepositories(string company)
+        public async Task<List<Repository>> ProcessRepositories(HttpClient client, string company)
     {
-        client.DefaultRequestHeaders.Accept.Clear();
+            
+            client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
             new MediaTypeWithQualityHeaderValue("application/vnd.github.v3+json"));
             client.DefaultRequestHeaders.Add("User-Agent", ".NET Foundation Repository Reporter");
@@ -29,6 +25,6 @@ namespace WebAPI.services
 
     public interface IRepositoryServices
     {
-        Task<List<Repository>> ProcessRepositories(string company);
+        Task<List<Repository>> ProcessRepositories(HttpClient client, string company);
     }
 }

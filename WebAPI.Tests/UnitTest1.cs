@@ -7,6 +7,7 @@ using Xunit;
 using Moq;
 using Moq.Protected;
 using WebAPI.services;
+using System.IO;
 
 namespace WebAPI.Tests
 {
@@ -15,11 +16,12 @@ namespace WebAPI.Tests
         [Fact]
         public async void ShouldReturnPosts()
         {
+            var data = File.ReadAllText("../../../Data.json");
             var handlerMock = new Mock<HttpMessageHandler>();
             var response = new HttpResponseMessage
             {
                 StatusCode = HttpStatusCode.OK,
-                Content = new StringContent(@"[{ ""id"": 1, ""title"": ""Cool post!""}, { ""id"": 100, ""title"": ""Some title""}]"),
+                Content = new StringContent(data),
             };
 
             handlerMock
@@ -30,9 +32,9 @@ namespace WebAPI.Tests
                   ItExpr.IsAny<CancellationToken>())
                .ReturnsAsync(response);
             var httpClient = new HttpClient(handlerMock.Object);
-            var posts = new RepositoryServices(httpClient);
+            var posts = new RepositoryServices();
 
-            var retrievedPosts = await posts.ProcessRepositories("ibm");
+            var retrievedPosts = await posts.ProcessRepositories(new HttpClient(handlerMock.Object), "ibm");
 
             Assert.NotNull(retrievedPosts);
             handlerMock.Protected().Verify(

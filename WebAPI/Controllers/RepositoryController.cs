@@ -45,12 +45,12 @@ namespace WebAPI.Controllers{
             cache.GetOrCreateAsync(company,async RepositoryList =>
             {
                 RepositoryList.SlidingExpiration = TimeSpan.FromSeconds(configuration.GetSection("CacheManagement").GetValue<double>("Duration"));
-                return await repositoryServices.ProcessRepositories(company);
+                return await repositoryServices.ProcessRepositories(new HttpClient(), company);
             });
 
             return cacheEntry;
         }
-        else{return await repositoryServices.ProcessRepositories(company);
+        else{return await repositoryServices.ProcessRepositories(new HttpClient(), company);
         }
         }
 }
