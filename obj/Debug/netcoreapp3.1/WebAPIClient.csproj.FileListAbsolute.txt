@@ -1,0 +1,15 @@
+C:\Users\LuanPedroMirandaCiol\WebAPIClient\bin\Debug\netcoreapp3.1\WebAPIClient.exe
+C:\Users\LuanPedroMirandaCiol\WebAPIClient\bin\Debug\netcoreapp3.1\WebAPIClient.deps.json
+C:\Users\LuanPedroMirandaCiol\WebAPIClient\bin\Debug\netcoreapp3.1\WebAPIClient.runtimeconfig.json
+C:\Users\LuanPedroMirandaCiol\WebAPIClient\bin\Debug\netcoreapp3.1\WebAPIClient.runtimeconfig.dev.json
+C:\Users\LuanPedroMirandaCiol\WebAPIClient\bin\Debug\netcoreapp3.1\WebAPIClient.dll
+C:\Users\LuanPedroMirandaCiol\WebAPIClient\bin\Debug\netcoreapp3.1\WebAPIClient.pdb
+C:\Users\LuanPedroMirandaCiol\WebAPIClient\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+C:\Users\LuanPedroMirandaCiol\WebAPIClient\obj\Debug\netcoreapp3.1\WebAPIClient.csprojAssemblyReference.cache
+C:\Users\LuanPedroMirandaCiol\WebAPIClient\obj\Debug\netcoreapp3.1\WebAPIClient.AssemblyInfoInputs.cache
+C:\Users\LuanPedroMirandaCiol\WebAPIClient\obj\Debug\netcoreapp3.1\WebAPIClient.AssemblyInfo.cs
+C:\Users\LuanPedroMirandaCiol\WebAPIClient\obj\Debug\netcoreapp3.1\WebAPIClient.csproj.CoreCompileInputs.cache
+C:\Users\LuanPedroMirandaCiol\WebAPIClient\obj\Debug\netcoreapp3.1\WebAPIClient.csproj.CopyComplete
+C:\Users\LuanPedroMirandaCiol\WebAPIClient\obj\Debug\netcoreapp3.1\WebAPIClient.dll
+C:\Users\LuanPedroMirandaCiol\WebAPIClient\obj\Debug\netcoreapp3.1\WebAPIClient.pdb
+C:\Users\LuanPedroMirandaCiol\WebAPIClient\obj\Debug\netcoreapp3.1\WebAPIClient.genruntimeconfig.cache
